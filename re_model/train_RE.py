@@ -67,7 +67,7 @@ def main(_):
         read_word_embedding()
     wordembedding = np.load(config.vec_npy_path_and_name)
     
-    logging.info('reading training data')
+    logging.info('reading training data_output')
     train_y, train_char, train_word, train_pos1, train_pos2 = generate_train_npy_data(category_)
     logging.info(str(train_y.shape) + ' ' + str(train_word.shape))
     # none_ind = re_utils.get_none_id(config.relation2id_file_path_and_name)

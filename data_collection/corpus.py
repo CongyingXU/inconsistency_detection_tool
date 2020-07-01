@@ -20,7 +20,7 @@ while decrement:
         decrement = True
 
 
-# data cleaning, convert reports into corpus to train word embeddings
+# data_output cleaning, convert reports into corpus to train word embeddings
 
 def build_corpus(data_dir, cps_dir):
     num_cat_dict = {0: 'memc', 1: 'bypass', 2:'dirtra', 3:'fileinc', 4:'dos', 5:'execution', 6:'gainpre', 7:'httprs', 8:'infor', 9:'csrf', 10:'overflow', 11:'sqli', 12:'xss'}

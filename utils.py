@@ -127,10 +127,10 @@ def get_f_result_name(case_idx, operation, transfer, labeled, duplicate, gazette
 
 def check_dir():
     if not os.path.exists(labeled_ner_data_input_path) or not os.path.exists(labeled_re_data_input_path):
-        print('Please check data input.')
+        print('Please check data_output input.')
         return
     if not os.path.exists(data_write_path):
-        print('Please set a data output path.')
+        print('Please set a data_output output path.')
         return
     for dir_name in [labeled_re_data_write_path,
                      labeled_ner_data_output_after_transfer_path,

@@ -66,9 +66,9 @@ def train_ner():
     logging.info('char_double_layer: ' + str(char_double_layer))
     logging.info('char_rnn: ' + str(char_rnn) + '\n\n\n')
 
-    logging.info('train data: ' + TRAIN_DATA)
-    logging.info('test data: ' + TEST_DATA)
-    logging.info("read data...")
+    logging.info('train data_output: ' + TRAIN_DATA)
+    logging.info('test data_output: ' + TEST_DATA)
+    logging.info("read data_output...")
 
     word_index, word_cnt = create_word_index([config.hash_file])
     wx, y, m = read_data(TRAIN_DATA, word_index)
@@ -94,7 +94,7 @@ def train_ner():
 
     test_data_dic = generate_line_dict_from_ner_data(TEST_DATA)
 
-    logging.info("add data...")
+    logging.info("add data_output...")
     model.add_data(x, y, m, wx, cm, gaze, tx, ty, tm, twx, tcm, tgaze, test_data_dic)
 
     logging.info("build the model...")

@@ -7,7 +7,7 @@ import json
 
 def download_nvd_data(nvd_year_list_to_download, full=True):
     nvd_json_version_dict = dict()
-    r = requests.get('https://nvd.nist.gov/vuln/data-feeds#JSON_FEED')
+    r = requests.get('https://nvd.nist.gov/vuln/data_output-feeds#JSON_FEED')
 
     for filename in re.findall("nvdcve-1.0-[0-9]*\.json\.zip", r.text):
         if not full:

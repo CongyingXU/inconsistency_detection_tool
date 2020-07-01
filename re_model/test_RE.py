@@ -326,14 +326,14 @@ def test_re():
                                 transfer=transfer,
                                 )
         if test_result is None:
-            logging.info(category + ' re data is none!')
+            logging.info(category + ' re data_output is none!')
             continue
         pd_dictionary = None
         if labeled:
             pd_dictionary, gt_dictionary, \
             prec_gt_, rec_gt_, f1_gt_, acc_gt_, \
             prec_all_, rec_all_, f1_all_, acc_all_ = test_result
-            # todo: prepare a sample data
+            # todo: prepare a sample data_output
             '''
             pd_dictionary, pd_dictionary_complete = complete_version_dict_from_dict(category, pd_dictionary)
             gt_dictionary, gt_dictionary_complete = complete_version_dict_from_dict(category, gt_dictionary)

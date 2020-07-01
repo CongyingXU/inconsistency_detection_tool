@@ -10,7 +10,7 @@ import config, utils
 
 
 def write_report_for_ner(dict_to_write):
-    # report content --> ner data format
+    # report content --> ner data_output format
     transfer_data_file = open(config.tmp_data, 'w')
     target_dataset = dict_to_write
     for cve_id in target_dataset:
@@ -71,7 +71,7 @@ def write_report_for_ner(dict_to_write):
                         find_space = (sent.find(' ') != -1)
                         if find_space and contains_letter and (len(sent) > 3):
                             sents.add((sent + title_or_content[0]).strip('> '))
-                    # print('load data success')
+                    # print('load data_output success')
                     # ******************* consistent with a_get_200_cveid_and_generate_report_data.py ****************
 
                     # splits = nltk.sent_tokenize(db_sent[db][link][title_or_content])
@@ -108,7 +108,7 @@ def write_report_for_ner(dict_to_write):
     f_data.write(write_str)
     transfer_data_file.close()
     remove_tmp_data()
-    print('ner data generation done...')
+    print('ner data_output generation done...')
     # return sentence_list, temp_list2
     # pass
 

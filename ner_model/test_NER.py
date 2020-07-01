@@ -132,7 +132,7 @@ def test_ner():
         py = None
 
         if not gazetteer:
-            logging.info('reading data from ' + SMALL_DATA)
+            logging.info('reading data_output from ' + SMALL_DATA)
 
             # tx, tcm = read_char_data(SMALL_DATA, char_index)
             # twx, ty, tm = read_data(SMALL_DATA, word_index)

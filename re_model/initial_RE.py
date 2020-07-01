@@ -51,7 +51,7 @@ def enrich_char2id(char2id, word):
 
 
 def read_word_embedding():
-    logging.info('reading word embedding data...')
+    logging.info('reading word embedding data_output...')
     vec = []
     word2id = {}
     char2id = {}
@@ -93,10 +93,10 @@ def read_word_embedding():
         f_write.write('char2id = ' + str(char2id))
 
 
-# reading data
+# reading data_output
 def init_test_data(re_origin_test_data_name_read, generate_from_ner_output_path=None, category_separate_idx=None, dup=False):
     word2id = utils.get_word2id()
-    logging.info('reading test data ...')
+    logging.info('reading test data_output ...')
 
     test_sen = {}  # {entity pair:[[sentence 1],[sentence 2]...]}
     test_ans = {}  # {entity pair:[labels,...]} the labels is N-hot vector (N is the number of multi-label)
@@ -111,7 +111,7 @@ def init_test_data(re_origin_test_data_name_read, generate_from_ner_output_path=
         #     origin_test_data_path_and_name = generate_from_ner_output_path + re_origin_test_data_name_read + '_' + str(category_separate_idx)
         #     ner_data_path_and_name = generate_from_ner_output_path + re_origin_test_data_name_read + commons.ner_data_suffix + '_' + str(category_separate_idx)
         #     generate_re_data_for_ner_output(ner_data_path_and_name, origin_test_data_path_and_name, commons.fixlen)
-    print('test data:', origin_test_data_path_and_name)
+    print('test data_output:', origin_test_data_path_and_name)
     f = open(origin_test_data_path_and_name, 'r', encoding='utf-8')
     count = 0
     while True:
@@ -219,7 +219,7 @@ def init_train_data(re_origin_train_data_name_read):
     train_sen = {}  # {entity pair:[[[label1-sentence 1],[label1-sentence 2]...],[[label2-sentence 1],[label2-sentence 2]...]}
     train_ans = {}  # {entity pair:[label1,label2,...]} the label is one-hot vector
 
-    logging.info('reading train data...')
+    logging.info('reading train data_output...')
     origin_train_data_path_and_name = config.labeled_re_data_input_path + re_origin_train_data_name_read
     f = open(origin_train_data_path_and_name, 'r', encoding='utf-8')
     while True:
@@ -329,7 +329,7 @@ def init_train_data(re_origin_train_data_name_read):
 
 def separate_new(train_test_x_y_npy_name):
 
-    logging.info('reading training data')
+    logging.info('reading training data_output')
     train_test_x_y_npy_path_and_name = config.labeled_re_data_write_path + train_test_x_y_npy_name
     x_train = np.load(train_test_x_y_npy_path_and_name + '_x.npy')
 
@@ -339,7 +339,7 @@ def separate_new(train_test_x_y_npy_name):
     train_pos1 = []
     train_pos2 = []
 
-    logging.info('seprating train data')
+    logging.info('seprating train data_output')
     for i in range(len(x_train)):
         word = []
         pos1 = []
@@ -370,7 +370,7 @@ def separate(x_npy):
     train_test_pos1 = []
     train_test_pos2 = []
 
-    logging.info('seprating data')
+    logging.info('seprating data_output')
     for i in range(len(x_npy)):
         word = []
         pos1 = []
