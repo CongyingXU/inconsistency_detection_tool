@@ -89,7 +89,7 @@ word_emb_dim_ner = 300
 word_emb_dim_re = 50
 
 # need to modify:
-word_emb_path = root_path + 'inconsistency_detection_tool/corpus_and_embeddings/embeddings/'
+word_emb_path = root_path + 'inconsistency_detection_tool/data/corpus_and_embeddings/embeddings/'
 
 hash_file = word_emb_path + 'words' + str(word_emb_dim_ner) + '.lst'
 emb_file = word_emb_path + 'embeddings' + str(word_emb_dim_ner) + '.txt'

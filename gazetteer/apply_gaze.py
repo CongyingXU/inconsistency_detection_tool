@@ -8,7 +8,7 @@ sys.path.insert(0, parent_dir)
 import config, utils
 
 from measurement.clean_version_and_measure import get_all_cat_version_dict, get_software_freq_from_version_dict
-from corpus_and_embedding.clean_cvedetails_software_list import clean_software_name_list
+from data.corpus_and_embedding import clean_software_name_list
 
 excluded_software_token_list = []
 
