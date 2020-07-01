@@ -8,7 +8,7 @@ sys.path.insert(0, parent_dir)
 import config, utils
 
 from measurement.clean_version_and_measure import get_all_cat_version_dict, get_software_freq_from_version_dict
-from data_output.corpus_and_embedding import clean_software_name_list
+from data_output.corpus_and_embeddings import clean_software_name_list
 
 excluded_software_token_list = []
 
@@ -28,7 +28,7 @@ def get_software_from_gazetteer(get_gazetteer_from_version_dict=False, get_gazet
         software_name_list = list(software_name_with_freq_dic.keys())
 
     elif get_gazetteer_from_cvedetails:
-        # with commons.add_path('../corpus_and_embedding/'):
+        # with commons.add_path('../corpus_and_embeddings/'):
         #     # category_module = __import__(commons.clean_cvedetails_software_file_name)
         #     category_module = __import__('clean_cvedetails_software_list')
         #     software_name_list = category_module.software_name_list
