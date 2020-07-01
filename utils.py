@@ -13,6 +13,7 @@ class add_path():
         sys.path.remove(self.path)
 
 
+
 def contain_letter(s):
     return any(i.isalpha() for i in s)
 
@@ -144,6 +145,15 @@ def check_dir():
             continue
         os.makedirs(dir_name)
 
+def read_TXTfile(path):
+    with open(path,'r') as f :
+        content = f.read()
+        return content
+
+def write_TXTfile(path,content):
+    with open(path,'w') as f :
+        # f.write(str(content, encoding = "utf-8"))
+        f.write(content)
 
 check_dir()
 

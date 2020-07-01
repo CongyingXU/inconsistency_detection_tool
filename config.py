@@ -4,9 +4,14 @@ import os
 # project_path = pc_root_path if os.path.exists('/Users/') else lrs_root_path
 
 # need to modify:
-root_path = '/home/yzd57/' if os.path.exists('/home/yzd57/') else '/Users/yingdong/Desktop/'
-project_path = root_path + 'ying/release/'
-data_write_path = root_path + 'ying/data/'
+# root_path = '/home/yzd57/' if os.path.exists('/home/yzd57/') else '/Users/yingdong/Desktop/'
+# project_path = root_path + 'ying/release/'
+# data_write_path = root_path + 'ying/data/'
+
+root_path = '/home/hadoop/dfs/data/Workspace/CongyingXU/gitrepo/'
+project_path = root_path + 'inconsistency_detection_tool/'
+data_write_path = root_path + 'inconsistency_detection_tool/data/'
+
 
 
 # ================= dataset path ====================
@@ -84,7 +89,7 @@ word_emb_dim_ner = 300
 word_emb_dim_re = 50
 
 # need to modify:
-word_emb_path = root_path + 'ying/data/corpus_and_embeddings/embeddings/'
+word_emb_path = root_path + 'inconsistency_detection_tool/corpus_and_embeddings/embeddings/'
 
 hash_file = word_emb_path + 'words' + str(word_emb_dim_ner) + '.lst'
 emb_file = word_emb_path + 'embeddings' + str(word_emb_dim_ner) + '.txt'
