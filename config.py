@@ -8,7 +8,7 @@ import os
 # project_path = root_path + 'ying/release/'
 # data_write_path = root_path + 'ying/data_output/'
 
-root_path = '/home/hadoop/dfs/data_output/Workspace/CongyingXU/gitrepo/'
+root_path = '/home/hadoop/dfs/data/Workspace/CongyingXU/gitrepo/'
 project_path = root_path + 'inconsistency_detection_tool/'
 data_write_path = root_path + 'inconsistency_detection_tool/data_output/'
 
