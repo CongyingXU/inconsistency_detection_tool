@@ -85,8 +85,10 @@ report_list = ['nvd', 'cve', 'securityfocus_official', 'securitytracker', 'secur
 
 # ================= word embeddings ====================
 
-word_emb_dim_ner = 300
-word_emb_dim_re = 50
+# word_emb_dim_ner = 300
+# word_emb_dim_re = 50
+word_emb_dim_ner = 100
+word_emb_dim_re = 100
 
 # need to modify:
 word_emb_path = root_path + 'inconsistency_detection_tool/data_output/corpus_and_embeddings/embeddings/'
